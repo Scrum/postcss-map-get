@@ -20,7 +20,6 @@ test('it should return body color and min-width width fro decl', t => {
 
 test('it should retunr width for at rule @media', t => {
   const expected = '@media (min-width: 1280px) {body {overflow-x: hidden}}';
-  const value = '@media (min-width: map-get((xxs: 0,xs: 576px,sm: 768px,md: 992px,lg: 1280px,xl: 1360px,xxl: 1600px) !default, lg))) {body {overflow-x: hidden}}';
+  const value = '@media (min-width: map-get((xxs: 0,xs: 576px,sm: 768px,md: 992px,lg: 1280px,xl: 1360px,xxl: 1600px) !default, lg)) {body {overflow-x: hidden}}';
   t.is(processing(value), expected);
 });
-
