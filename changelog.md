@@ -1,3 +1,13 @@
+<a name="0.2.0"></a>
+## 0.2.0 (2018-02-26)
+
+* 0.2.0 ([fba79c6](https://github.com/gitscrum/postcss-map-get/commit/fba79c6))
+* feat: add support for at rules, close #2 ([d656f6d](https://github.com/gitscrum/postcss-map-get/commit/d656f6d)), closes [#2](https://github.com/gitscrum/postcss-map-get/issues/2)
+* test: for #2 ([061864e](https://github.com/gitscrum/postcss-map-get/commit/061864e)), closes [#2](https://github.com/gitscrum/postcss-map-get/issues/2)
+* build: update changelog ([5b26591](https://github.com/gitscrum/postcss-map-get/commit/5b26591))
+
+
+
 <a name="0.1.0"></a>
 ## 0.1.0 (2018-02-26)
 
