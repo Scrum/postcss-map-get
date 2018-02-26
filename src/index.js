@@ -35,9 +35,10 @@ export default postcss.plugin('postcss-map-get', () => {
 
     nodes.walkAtRules(rules => {
       const {params} = rules;
+
       const start = params.indexOf(METHOD);
-      const end = params.lastIndexOf('))');
-      rules.params = `${params.substr(0, start)}${valResolve(normalize(params.substring(start, end)))}${params.substr(end + 1)}`;
+      const end = params.lastIndexOf(')');
+      rules.params = `${params.substr(0, start)}${valResolve(normalize(params.substring(start, end)))}${params.substr(end)}`;
     });
   };
 });
