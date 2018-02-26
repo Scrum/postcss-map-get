@@ -1,3 +1,13 @@
+<a name="0.2.1"></a>
+## <small>0.2.1 (2018-02-26)</small>
+
+* 0.2.1 ([c69484b](https://github.com/gitscrum/postcss-map-get/commit/c69484b))
+* fix: get value from params ([f0420ef](https://github.com/gitscrum/postcss-map-get/commit/f0420ef))
+* test: fix test ([56c7c82](https://github.com/gitscrum/postcss-map-get/commit/56c7c82))
+* build: update changelog ([39ae960](https://github.com/gitscrum/postcss-map-get/commit/39ae960))
+
+
+
 <a name="0.2.0"></a>
 ## 0.2.0 (2018-02-26)
 
