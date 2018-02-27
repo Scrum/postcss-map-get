@@ -1,3 +1,13 @@
+<a name="0.2.2"></a>
+## <small>0.2.2 (2018-02-27)</small>
+
+* 0.2.2 ([7aac3ab](https://github.com/gitscrum/postcss-map-get/commit/7aac3ab))
+* perf: search map and key ([25e6e28](https://github.com/gitscrum/postcss-map-get/commit/25e6e28))
+* test: for str get-content and normalize ([e41bec8](https://github.com/gitscrum/postcss-map-get/commit/e41bec8))
+* build: update changelog ([1cf4289](https://github.com/gitscrum/postcss-map-get/commit/1cf4289))
+
+
+
 <a name="0.2.1"></a>
 ## <small>0.2.1 (2018-02-26)</small>
 
