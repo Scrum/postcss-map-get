@@ -18,8 +18,14 @@ test('it should return body color and min-width width fro decl', t => {
   t.is(processing(value), expected);
 });
 
-test('it should retunr width for at rule @media', t => {
-  const expected = '@media (min-width: 1280px) {body {overflow-x: hidden}}';
+test('it should return width for at rule @media', t => {
+  const expected = '@media (min-width:1280px) {body {overflow-x: hidden}}';
   const value = '@media (min-width: map-get((xxs: 0,xs: 576px,sm: 768px,md: 992px,lg: 1280px,xl: 1360px,xxl: 1600px) !default, lg)) {body {overflow-x: hidden}}';
+  t.is(processing(value), expected);
+});
+
+test('it should return width for decl', t => {
+  const expected = '.cnr-main {min-width: (1280px-17);}';
+  const value = '.cnr-main {min-width: (map-get((xxs: 0,xs: 576px,sm: 768px,md: 992px,lg: 1280px,xl: 1360px,xxl: 1600px) !default, lg) - 17);}';
   t.is(processing(value), expected);
 });
