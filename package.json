@@ -3,7 +3,7 @@
   "version": "0.2.2",
   "description": "PostCSS plugin for sass-like Map Function",
   "license": "MIT",
-  "repository": "Sscrum/postcss-map-get",
+  "repository": "Scrum/postcss-map-get",
   "homepage": "scrum/postcss-map-get#readme",
   "bugs": "scrum/postcss-map-get/issues",
   "author": {
