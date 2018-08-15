@@ -3,9 +3,9 @@
   "version": "0.2.2",
   "description": "PostCSS plugin for sass-like Map Function",
   "license": "MIT",
-  "repository": "gitscrum/postcss-map-get",
-  "homepage": "gitscrum/postcss-map-get#readme",
-  "bugs": "gitscrum/postcss-map-get/issues",
+  "repository": "Sscrum/postcss-map-get",
+  "homepage": "scrum/postcss-map-get#readme",
+  "bugs": "scrum/postcss-map-get/issues",
   "author": {
     "name": "Ivan Demidov",
     "email": "Scrum@list.ru",
