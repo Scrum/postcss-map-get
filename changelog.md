@@ -39,6 +39,3 @@
 * test: for map get ([e47d15e](https://github.com/gitscrum/postcss-map-get/commit/e47d15e))
 * ci: config for travis ([c7b6f6f](https://github.com/gitscrum/postcss-map-get/commit/c7b6f6f))
 * docs: add readme ([09d7ff0](https://github.com/gitscrum/postcss-map-get/commit/09d7ff0))
-
-
-
