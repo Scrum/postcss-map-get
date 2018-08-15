@@ -1,7 +1,7 @@
 # postcss-map-get <a href="https://github.com/postcss/postcss"><img align="left" height="49" title="PostCSS" src="http://postcss.github.io/postcss/logo.svg"></a>
 > [PostCSS](https://github.com/postcss/postcss) plugin to transform SASS Function [map-get](http://sass-lang.com/documentation/Sass/Script/Functions.html#map_get-instance_method).  
 
-[![Travis Build Status](https://img.shields.io/travis/GitScrum/postcss-map-get/master.svg?style=flat-square&label=unix)](https://travis-ci.org/GitScrum/postcss-map-get)[![node](https://img.shields.io/node/v/postcss-map-get.svg?maxAge=2592000&style=flat-square)]()[![npm version](https://img.shields.io/npm/v/postcss-map-get.svg?style=flat-square)](https://www.npmjs.com/package/postcss-map-get)[![Dependency Status](https://david-dm.org/gitscrum/postcss-map-get.svg?style=flat-square)](https://david-dm.org/gitscrum/postcss-map-get)[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square)](https://github.com/sindresorhus/xo)[![Coveralls status](https://img.shields.io/coveralls/GitScrum/postcss-map-get.svg?style=flat-square)](https://coveralls.io/r/GitScrum/postcss-map-get)
+[![Travis Build Status](https://img.shields.io/travis/Scrum/postcss-map-get/master.svg?style=flat-square&label=unix)](https://travis-ci.org/Scrum/postcss-map-get)[![node](https://img.shields.io/node/v/postcss-map-get.svg?maxAge=2592000&style=flat-square)]()[![npm version](https://img.shields.io/npm/v/postcss-map-get.svg?style=flat-square)](https://www.npmjs.com/package/postcss-map-get)[![Dependency Status](https://david-dm.org/Scrum/postcss-map-get.svg?style=flat-square)](https://david-dm.org/Scrum/postcss-map-get)[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square)](https://github.com/sindresorhus/xo)[![Coveralls status](https://img.shields.io/coveralls/Scrum/postcss-map-get.svg?style=flat-square)](https://coveralls.io/r/Scrum/postcss-map-get)
 
 [![npm downloads](https://img.shields.io/npm/dm/postcss-map-get.svg?style=flat-square)](https://www.npmjs.com/package/postcss-map-get)[![npm](https://img.shields.io/npm/dt/postcss-map-get.svg?style=flat-square)](https://www.npmjs.com/package/postcss-map-get)
 
@@ -30,11 +30,11 @@ var css = fs.readFileSync('css/input.css', 'utf8');
 
 // Process CSS
 var output = postcss()
-    .use(mapGet())
-    .process(css, {
-        from: 'css/input.css'
-    })
-    .css;
+  .use(mapGet())
+  .process(css, {
+    from: 'css/input.css'
+  })
+  .css;
 
 console.log(output);
 ```
