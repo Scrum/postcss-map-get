@@ -1,7 +1,6 @@
 import postcss from 'postcss';
-import strNormalize from './str-normalize';
 import strGetContent from './str-get-content';
-import {METHOD, DIVIDER} from './constant';
+import {METHOD} from './constant';
 
 // const valResolve = value => {
 //   const map = value.substring(
@@ -28,29 +27,33 @@ import {METHOD, DIVIDER} from './constant';
 //   //console.log(value.substr(0, start),value.substr(start, end),value.substr(end));
 //   return `${value.substr(0, start)}${valResolve(value.substr(start, end))}${value.substr(end)}`;
 // }
-const mapGet = val => {
-  let [map, key] = val
-    .split(DIVIDER)
-    .map(value => {
-      if (value.includes(':')) {
-        return value.split(',')
-          .reduce((map, string) => {
-            const [key, value] = string.split(':');
-            return Object.assign(map, {[key]: value});
-          }, {});
+
+const getKeyFromMapString = (mapString, key) => {
+  // Remove all whitespace character from the key
+  const keyValue = key.replace(/\s/g, '');
+
+  let requiredValue;
+
+  mapString.split(',').some(completePropertyString => {
+    if (completePropertyString.includes(':')) {
+      const [key, value] = completePropertyString.split(':');
+      if (key.trim() === keyValue) {
+        requiredValue = value.trim();
       }
+    } else {
+      requiredValue = completePropertyString;
+    }
 
-      return value;
-    });
+    return Boolean(requiredValue);
+  });
 
-  return map[key];
+  return requiredValue;
 };
 
 const valResolve = val => {
-  const value = strNormalize(val);
-  const {start, content, end} = strGetContent(value);
+  const {before, map, key, after} = strGetContent(val);
 
-  return `${start}${mapGet(content)}${end}`;
+  return `${before}${getKeyFromMapString(map, key)}${after}`;
 };
 
 export default postcss.plugin('postcss-map-get', () => {
