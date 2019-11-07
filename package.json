@@ -1,6 +1,6 @@
 {
   "name": "postcss-map-get",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "PostCSS plugin for sass-like Map Function",
   "license": "MIT",
   "repository": "Scrum/postcss-map-get",

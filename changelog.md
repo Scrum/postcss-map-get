@@ -1,3 +1,18 @@
+## <small>0.2.5 (2019-11-07)</small>
+
+* build: drop support old node ([ab40c9f](https://github.com/Scrum/postcss-map-get/commit/ab40c9f))
+* build: move config to file and update build scripts ([e5a537a](https://github.com/Scrum/postcss-map-get/commit/e5a537a))
+* build: update changelog ([cfd5d0d](https://github.com/Scrum/postcss-map-get/commit/cfd5d0d))
+* build: update depDev ([8a1d5f7](https://github.com/Scrum/postcss-map-get/commit/8a1d5f7))
+* 0.2.4 ([c1c0a42](https://github.com/Scrum/postcss-map-get/commit/c1c0a42))
+* Update readme.md ([564fe94](https://github.com/Scrum/postcss-map-get/commit/564fe94))
+* style: remove comment and fix indent ([3f48cc2](https://github.com/Scrum/postcss-map-get/commit/3f48cc2))
+* test: fix double name for test ([cf59b66](https://github.com/Scrum/postcss-map-get/commit/cf59b66))
+* ci: drop old node version ([14d819d](https://github.com/Scrum/postcss-map-get/commit/14d819d))
+* fix: keep property before and after map-get invocation ([454647d](https://github.com/Scrum/postcss-map-get/commit/454647d))
+
+
+
 ## <small>0.2.3 (2018-08-15)</small>
 
 * 0.2.3 ([988cc97](https://github.com/Scrum/postcss-map-get/commit/988cc97))
@@ -48,3 +63,6 @@
 * test: for map get ([e47d15e](https://github.com/Scrum/postcss-map-get/commit/e47d15e))
 * ci: config for travis ([c7b6f6f](https://github.com/Scrum/postcss-map-get/commit/c7b6f6f))
 * docs: add readme ([09d7ff0](https://github.com/Scrum/postcss-map-get/commit/09d7ff0))
+
+
+
