@@ -15,7 +15,7 @@ Adds the ability to use sass like Map Function [map-get](http://sass-lang.com/do
 $ npm install postcss-map-get
 ```
 
-> **Note:** This project is compatible with node v4+
+> **Note:** This project is compatible with node v8+
 
 ## Usage
 
