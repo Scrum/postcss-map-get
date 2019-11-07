@@ -2,8 +2,8 @@ import postcss from 'postcss';
 import test from 'ava';
 import plugin from '../src';
 
-const processing = (input, opts) => {
-  return postcss([plugin(opts)]).process(input).css;
+const processing = (input, options) => {
+  return postcss([plugin(options)]).process(input).css;
 };
 
 test('it should return body color for background', t => {

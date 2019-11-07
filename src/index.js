@@ -2,32 +2,6 @@ import postcss from 'postcss';
 import strGetContent from './str-get-content';
 import {METHOD} from './constant';
 
-// const valResolve = value => {
-//   const map = value.substring(
-//     value.indexOf('((') + 2,
-//     value.indexOf('),')
-//   )
-//     .split(',')
-//     .reduce((map, string) => {
-//       const [key, value] = string.split(':');
-//       return Object.assign(map, {[key]: value});
-//     }, {});
-
-//   const key = value.substring(
-//     value.indexOf('),') + 2,
-//     value.lastIndexOf(')')
-//   );
-
-//   return map[key];
-// };
-
-// const replace = value => {
-//   console.log(value);
-
-//   //console.log(value.substr(0, start),value.substr(start, end),value.substr(end));
-//   return `${value.substr(0, start)}${valResolve(value.substr(start, end))}${value.substr(end)}`;
-// }
-
 const getKeyFromMapString = (mapString, key) => {
   // Remove all whitespace character from the key
   const keyValue = key.replace(/\s/g, '');
