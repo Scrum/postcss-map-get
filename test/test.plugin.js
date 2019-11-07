@@ -30,13 +30,13 @@ test('it should return width for decl', t => {
   t.is(processing(value), expected);
 });
 
-test('it should keep proper string format for element before invocation', t => {
+test('it should keep proper string format for element before invocation, borderColor', t => {
   const expected = '.foo {border: 1px solid #FFF;}';
   const value = '.foo {border: 1px solid map-get((borderColor: #FFF) !default, borderColor);}';
   t.is(processing(value), expected);
 });
 
-test('it should keep proper string format for element before invocation', t => {
+test('it should keep proper string format for element before invocation, borderStyle', t => {
   const expected = '.foo {border: 1px solid #FFF;}';
   const value = '.foo {border: 1px map-get((borderStyle: solid) !default, borderStyle) #FFF;}';
   t.is(processing(value), expected);
