@@ -1,0 +1,23 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": 8
+        }
+      }
+    ],
+    [
+      "minify",
+      {
+        "removeUndefined": false,
+        "mangle": false
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "add-module-exports"
+  ]
+}

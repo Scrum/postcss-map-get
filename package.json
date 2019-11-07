@@ -16,10 +16,7 @@
     "node": ">=8"
   },
   "scripts": {
-    "prepush": "npm t",
-    "precommit": "clinton && lint-staged",
-    "commitmsg": "commitlint --extends=@commitlint/config-angular -e",
-    "postpublish": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"build: update changelog\"",
+    "version": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"build: update changelog\"",
     "prepare": "npm run build",
     "build": "rimraf lib && babel src -d lib",
     "test": "nyc ava"
@@ -70,69 +67,9 @@
     "nyc": "^14.1.1",
     "rimraf": "^3.0.0"
   },
-  "lint-staged": {
-    "{src,test}/**/*.js": "eslint --fix",
-    "*.md": "eslint --fix"
-  },
   "ava": {
     "require": [
       "@babel/register"
     ]
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": 4
-          }
-        }
-      ],
-      [
-        "minify",
-        {
-          "removeUndefined": false,
-          "mangle": false
-        }
-      ]
-    ],
-    "plugins": [
-      "@babel/plugin-transform-runtime",
-      "add-module-exports"
-    ]
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "plugins": [
-      "html",
-      "unicorn",
-      "babel",
-      "markdown"
-    ],
-    "extends": [
-      "plugin:unicorn/recommended",
-      "xo",
-      "xo-space"
-    ],
-    "rules": {
-      "capitalized-comments": "off"
-    }
-  },
-  "clinton": {
-    "ignores": [
-      "test/**",
-      "tmp/**",
-      "lib/**",
-      "*.{html,jpg}"
-    ],
-    "rules": {
-      "pkg-main": [
-        "off"
-      ],
-      "xo": [
-        "off"
-      ]
-    }
   }
 }
