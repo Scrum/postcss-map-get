@@ -19,7 +19,8 @@
     "version": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"build: update changelog\"",
     "prepare": "npm run build",
     "build": "rimraf lib && babel src -d lib",
-    "test": "nyc ava"
+    "test": "nyc ava",
+    "coverage": "nyc --reporter=lcov --reporter=text-summary ava"
   },
   "files": [
     "lib/"
