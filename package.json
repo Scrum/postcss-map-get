@@ -1,6 +1,6 @@
 {
   "name": "postcss-map-get",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "PostCSS plugin for sass-like Map Function",
   "license": "MIT",
   "repository": "Scrum/postcss-map-get",
@@ -19,7 +19,8 @@
     "version": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"build: update changelog\"",
     "prepare": "npm run build",
     "build": "rimraf lib && babel src -d lib",
-    "test": "nyc ava"
+    "test": "nyc ava",
+    "coverage": "nyc --reporter=lcov --reporter=text-summary ava"
   },
   "files": [
     "lib/"
@@ -48,22 +49,21 @@
     "@commitlint/config-angular": "^8.2.0",
     "ava": "*",
     "babel-eslint": "^10.0.3",
-    "babel-plugin-add-module-exports": "^1.0.2",
     "babel-preset-minify": "^0.5.1",
     "clinton": "^0.14.0",
-    "conventional-changelog-cli": "^2.0.25",
+    "conventional-changelog-cli": "^2.0.27",
     "coveralls": "^3.0.7",
     "eslint": "^6.6.0",
     "eslint-config-xo": "^0.27.2",
     "eslint-config-xo-space": "^0.21.0",
-    "eslint-formatter-pretty": "^2.1.1",
+    "eslint-formatter-pretty": "^3.0.0",
     "eslint-plugin-ava": "^9.0.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-markdown": "^1.0.1",
     "eslint-plugin-unicorn": "^12.1.0",
     "husky": "^3.0.9",
-    "lint-staged": "^9.4.2",
+    "lint-staged": "^9.4.3",
     "nyc": "^14.1.1",
     "rimraf": "^3.0.0"
   },

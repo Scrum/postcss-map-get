@@ -17,7 +17,6 @@
     ]
   ],
   "plugins": [
-    "@babel/plugin-transform-runtime",
-    "add-module-exports"
+    "@babel/plugin-transform-runtime"
   ]
 }

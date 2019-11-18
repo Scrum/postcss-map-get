@@ -41,3 +41,15 @@ test('it should keep proper string format for element before invocation, borderS
   const value = '.foo {border: 1px map-get((borderStyle: solid) !default, borderStyle) #FFF;}';
   t.is(processing(value), expected);
 });
+
+test('it should resolve multiple map-get on the same property value', t => {
+  const expected = '.foo {border: 1px solid #FFF;}';
+  const value = '.foo {border: 1px map-get((borderStyle: solid), borderStyle) map-get((borderColor: #FFF), borderColor);}';
+  t.is(processing(value), expected);
+});
+
+test('it should resolve nested invocation', t => {
+  const expected = '.foo {color: green}';
+  const value = '.foo {color: map-get(map-get((corporate: (textColor: green), ea: (textColor: black)), corporate), textColor)}';
+  t.is(processing(value), expected);
+});
