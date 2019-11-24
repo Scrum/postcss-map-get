@@ -1,4 +1,4 @@
-import {METHOD} from './constant';
+import {METHOD, ERROR_PREFIX} from './constant';
 
 import parseParenthesisContent from './parse-parenthesis-content';
 
@@ -58,6 +58,10 @@ function getKeyFromMapString(mapString, keyParameter) {
         value += currentCharacter;
       }
     }
+  }
+
+  if (!map[keyValue]) {
+    throw new Error(`${ERROR_PREFIX} – unable to find “${keyValue}“ key inside map “(${mapString})“`);
   }
 
   return map[keyValue];

@@ -53,3 +53,15 @@ test('it should resolve nested invocation', t => {
   const value = '.foo {color: map-get(map-get((corporate: (textColor: green), ea: (textColor: black)), corporate), textColor)}';
   t.is(processing(value), expected);
 });
+
+test('it should throw an error when key is not defined', t => {
+  const requestedKey = 'notfound';
+  const map = '(main: #FF0000)';
+  const value = `.foo { color: map-get(${map}, ${requestedKey}) }`;
+
+  const testError = t.throws(() => {
+    processing(value);
+  }, null);
+
+  t.is(testError.message, `postcss – map-get – unable to find “${requestedKey}“ key inside map “${map}“`);
+});
