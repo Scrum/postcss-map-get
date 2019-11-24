@@ -33,7 +33,7 @@ export default function parseParenthesisContent(stringToParse, startingPosition 
    * String should be already validated by postcss but to avoid unclear stacktrace I'll manage the error anyway.
    */
   if (stack.length !== 0) {
-    throw new Error(`${ERROR_PREFIX} – parenthesis not closed`);
+    throw new Error(`${ERROR_PREFIX} parenthesis not closed`);
   }
 
   return {content, position};

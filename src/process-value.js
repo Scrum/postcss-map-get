@@ -13,9 +13,8 @@ function getKeyFromMapString(mapString, keyParameter) {
   // remove open and close parenthesis from the map string
   mapString = mapString.slice(1, -1);
 
-  const map = {};
-
   let isParsingKey = true;
+  let hasFinishedParsingValue = false;
 
   let key = '';
   let value = '';
@@ -23,24 +22,24 @@ function getKeyFromMapString(mapString, keyParameter) {
   for (let position = 0; position < mapString.length; position++) {
     const currentCharacter = mapString[position];
 
-    if (isParsingKey) { // process the key (add all characters until find a :)
+    // process the key (add all characters until find a `:`)
+    if (isParsingKey) {
       if (currentCharacter === ':') {
         isParsingKey = false;
       } else {
         key += currentCharacter;
       }
-    } else if (currentCharacter === '(') {
+
+      continue;
+    }
+
+    if (currentCharacter === '(') {
       // if value contains a `(` that means that is map so parse the string until the `(` is closed
       const output = parseParenthesisContent(mapString, position);
       value += output.content;
       position = output.position;
 
-      map[key] = value.trim();
-
-      // value declaration is complete return to check key and reset both variables
-      isParsingKey = true;
-      key = '';
-      value = '';
+      hasFinishedParsingValue = true;
     } else {
       // simple map with property / value pairs
       const isLastCharacter = position === mapString.length - 1;
@@ -49,22 +48,26 @@ function getKeyFromMapString(mapString, keyParameter) {
           value += currentCharacter;
         }
 
-        map[key] = value.trim();
-
-        isParsingKey = true;
-        key = '';
-        value = '';
+        hasFinishedParsingValue = true;
       } else {
         value += currentCharacter;
       }
     }
+
+    if (hasFinishedParsingValue) {
+      if (key === keyValue) {
+        return value.trim();
+      }
+
+      // value declaration is complete return to check key and reset both variables
+      isParsingKey = true;
+      hasFinishedParsingValue = false;
+      key = '';
+      value = '';
+    }
   }
 
-  if (!map[keyValue]) {
-    throw new Error(`${ERROR_PREFIX} – unable to find “${keyValue}“ key inside map “(${mapString})“`);
-  }
-
-  return map[keyValue];
+  throw new Error(`${ERROR_PREFIX} unable to find “${keyValue}“ key inside map “(${mapString})“`);
 }
 
 /**
@@ -88,6 +91,10 @@ export default function (value) {
 
     // resolve the desidered requested key
     let keyString = '';
+
+    // indicates if we found the come which separate map and requested key:
+    // map-get((...) !default, bar)
+    //                       ↑
     let hasFoundComa = false;
 
     for (; position < resolvedValue.length; position++) {
