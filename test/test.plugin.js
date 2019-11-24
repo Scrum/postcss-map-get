@@ -12,7 +12,7 @@ test('it should return body color for background', t => {
   t.is(processing(value), expected);
 });
 
-test('it should return body color and min-width width fro decl', t => {
+test('it should return body color and min-width width from decl', t => {
   const expected = 'body{background: #fff;min-width: 1280px;}';
   const value = 'body{background: map-get((body: #fff,main-red: #c53831,link-blue: #0592fb) !default, body);min-width: map-get((xxs: 0,xs: 576px,sm: 768px,md: 992px,lg: 1280px,xl: 1360px,xxl: 1600px) !default, lg);}';
   t.is(processing(value), expected);
@@ -36,7 +36,7 @@ test('it should keep proper string format for element before invocation, borderC
   t.is(processing(value), expected);
 });
 
-test('it should keep proper string format for element before invocation, borderStyle', t => {
+test('it should keep proper string format for element before and after invocation, borderStyle', t => {
   const expected = '.foo {border: 1px solid #FFF;}';
   const value = '.foo {border: 1px map-get((borderStyle: solid) !default, borderStyle) #FFF;}';
   t.is(processing(value), expected);
