@@ -12,7 +12,7 @@ test('it should return body color for background', t => {
   t.is(processing(value), expected);
 });
 
-test('it should return body color and min-width width fro decl', t => {
+test('it should return body color and min-width width from decl', t => {
   const expected = 'body{background: #fff;min-width: 1280px;}';
   const value = 'body{background: map-get((body: #fff,main-red: #c53831,link-blue: #0592fb) !default, body);min-width: map-get((xxs: 0,xs: 576px,sm: 768px,md: 992px,lg: 1280px,xl: 1360px,xxl: 1600px) !default, lg);}';
   t.is(processing(value), expected);
@@ -36,7 +36,7 @@ test('it should keep proper string format for element before invocation, borderC
   t.is(processing(value), expected);
 });
 
-test('it should keep proper string format for element before invocation, borderStyle', t => {
+test('it should keep proper string format for element before and after invocation, borderStyle', t => {
   const expected = '.foo {border: 1px solid #FFF;}';
   const value = '.foo {border: 1px map-get((borderStyle: solid) !default, borderStyle) #FFF;}';
   t.is(processing(value), expected);
@@ -52,4 +52,16 @@ test('it should resolve nested invocation', t => {
   const expected = '.foo {color: green}';
   const value = '.foo {color: map-get(map-get((corporate: (textColor: green), ea: (textColor: black)), corporate), textColor)}';
   t.is(processing(value), expected);
+});
+
+test('it should throw an error when key is not defined', t => {
+  const requestedKey = 'notfound';
+  const map = '(main: #FF0000)';
+  const value = `.foo { color: map-get(${map}, ${requestedKey}) }`;
+
+  const testError = t.throws(() => {
+    processing(value);
+  }, null);
+
+  t.is(testError.message, `postcss – map-get – unable to find “${requestedKey}“ key inside map “${map}“`);
 });

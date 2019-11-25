@@ -31,3 +31,14 @@ tests.forEach(({stringToParse, startPosition, expectedContent}, testIndex) => {
     t.deepEqual(output.position, expectedPosition);
   });
 });
+
+test('it should throw an error when number of parenthesis is not exact', t => {
+  // missing parenthesis position:                     ↓
+  const value = '(map-get((corporate: (textColor: green, ea: (textColor: black), corporate), textColor)';
+
+  const testError = t.throws(() => {
+    parseParenthesisContent(value);
+  }, null);
+
+  t.is(testError.message, 'postcss – map-get – parenthesis not closed');
+});
