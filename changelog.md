@@ -1,9 +1,20 @@
+## <small>0.2.7 (2019-11-25)</small>
+
+* perf: do not parse all map string if a key match ([f149f2b](https://github.com/Scrum/postcss-map-get/commit/f149f2b))
+* feat: throw an error if key is not defined ([d74b0a5](https://github.com/Scrum/postcss-map-get/commit/d74b0a5))
+* fix: add error for not closed parenthesis in parse-parenthesis-content ([c75b461](https://github.com/Scrum/postcss-map-get/commit/c75b461))
+* fix: correct some typo in test ([6766729](https://github.com/Scrum/postcss-map-get/commit/6766729))
+
+
+
 ## <small>0.2.6 (2019-11-18)</small>
 
+* 0.2.6 ([f7bef29](https://github.com/Scrum/postcss-map-get/commit/f7bef29))
+* build: update changelog ([8dc7825](https://github.com/Scrum/postcss-map-get/commit/8dc7825))
+* build: update depDev ([50adaef](https://github.com/Scrum/postcss-map-get/commit/50adaef))
 * feat: support nested and multiple invocation ([bac0c27](https://github.com/Scrum/postcss-map-get/commit/bac0c27)), closes [#13](https://github.com/Scrum/postcss-map-get/issues/13)
 * perf: remove babel-plugin-add-module-exports ([bb225c5](https://github.com/Scrum/postcss-map-get/commit/bb225c5))
 * test: multi getters property for issue #13 ([0cc4f9c](https://github.com/Scrum/postcss-map-get/commit/0cc4f9c)), closes [#13](https://github.com/Scrum/postcss-map-get/issues/13)
-* build: update depDev ([50adaef](https://github.com/Scrum/postcss-map-get/commit/50adaef))
 
 
 
