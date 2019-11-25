@@ -49,6 +49,7 @@
     "@commitlint/config-angular": "^8.2.0",
     "ava": "*",
     "babel-eslint": "^10.0.3",
+    "babel-plugin-add-module-exports": "^1.0.2",
     "babel-preset-minify": "^0.5.1",
     "clinton": "^0.14.0",
     "conventional-changelog-cli": "^2.0.27",
