@@ -1,5 +1,13 @@
+## <small>0.2.8 (2019-11-25)</small>
+
+* fix: reinstall babel-plugin-add-module-exports fix #18 ([bcfc486](https://github.com/Scrum/postcss-map-get/commit/bcfc486)), closes [#18](https://github.com/Scrum/postcss-map-get/issues/18)
+
+
+
 ## <small>0.2.7 (2019-11-25)</small>
 
+* 0.2.7 ([a1945e8](https://github.com/Scrum/postcss-map-get/commit/a1945e8))
+* build: update changelog ([12755ca](https://github.com/Scrum/postcss-map-get/commit/12755ca))
 * perf: do not parse all map string if a key match ([f149f2b](https://github.com/Scrum/postcss-map-get/commit/f149f2b))
 * feat: throw an error if key is not defined ([d74b0a5](https://github.com/Scrum/postcss-map-get/commit/d74b0a5))
 * fix: add error for not closed parenthesis in parse-parenthesis-content ([c75b461](https://github.com/Scrum/postcss-map-get/commit/c75b461))
