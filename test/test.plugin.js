@@ -65,3 +65,9 @@ test('it should throw an error when key is not defined', t => {
 
   t.is(testError.message, `postcss – map-get – unable to find “${requestedKey}“ key inside map “${map}“`);
 });
+
+test('it should remove line breaks and space from map key only', t => {
+  const expected = '.foo {border: 1px solid black}';
+  const value = '.foo {border: map-get((\n  border: 1px solid black), border)}';
+  t.is(processing(value), expected);
+});
