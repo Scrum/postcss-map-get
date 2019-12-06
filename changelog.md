@@ -1,5 +1,13 @@
+## <small>0.2.9 (2019-12-06)</small>
+
+* fix: remove whitespace and line breaks from map keys ([d879d73](https://github.com/Scrum/postcss-map-get/commit/d879d73))
+
+
+
 ## <small>0.2.8 (2019-11-25)</small>
 
+* 0.2.8 ([bd77754](https://github.com/Scrum/postcss-map-get/commit/bd77754))
+* build: update changelog ([91ca2d3](https://github.com/Scrum/postcss-map-get/commit/91ca2d3))
 * fix: reinstall babel-plugin-add-module-exports fix #18 ([bcfc486](https://github.com/Scrum/postcss-map-get/commit/bcfc486)), closes [#18](https://github.com/Scrum/postcss-map-get/issues/18)
 
 
