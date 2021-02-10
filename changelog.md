@@ -1,5 +1,17 @@
+## 0.3.0 (2021-02-10)
+
+* build(deps): bump acorn from 7.1.0 to 7.1.1 ([6eeb54e](https://github.com/Scrum/postcss-map-get/commit/6eeb54e))
+* build(deps): bump handlebars from 4.5.1 to 4.7.6 ([e5b409c](https://github.com/Scrum/postcss-map-get/commit/e5b409c))
+* build(deps): bump ini from 1.3.5 to 1.3.7 ([eaa3805](https://github.com/Scrum/postcss-map-get/commit/eaa3805))
+* build(deps): npm audit fix ([8a9fa54](https://github.com/Scrum/postcss-map-get/commit/8a9fa54))
+* feat: migrate plugin to postcss 8 ([70302f4](https://github.com/Scrum/postcss-map-get/commit/70302f4))
+
+
+
 ## <small>0.2.9 (2019-12-06)</small>
 
+* 0.2.9 ([efede30](https://github.com/Scrum/postcss-map-get/commit/efede30))
+* build: update changelog ([a683bf2](https://github.com/Scrum/postcss-map-get/commit/a683bf2))
 * fix: remove whitespace and line breaks from map keys ([d879d73](https://github.com/Scrum/postcss-map-get/commit/d879d73))
 
 
