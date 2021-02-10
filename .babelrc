@@ -19,5 +19,6 @@
   "plugins": [
     "@babel/plugin-transform-runtime",
     "add-module-exports"
-  ]
+  ],
+  "comments": false
 }
