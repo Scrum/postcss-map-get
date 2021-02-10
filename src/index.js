@@ -1,23 +1,28 @@
-import postcss from 'postcss';
 import processValue from './process-value';
 import {METHOD} from './constant';
 
-export default postcss.plugin('postcss-map-get', () => {
-  return nodes => {
-    nodes.walkDecls(decl => {
+const plugin = () => {
+  return {
+    postcssPlugin: 'postcss-map-get',
+
+    Declaration(decl) {
       let {value} = decl;
 
       if (value.includes(METHOD)) {
         decl.value = processValue(decl.value);
       }
-    });
+    },
 
-    nodes.walkAtRules(rules => {
-      const {params: parameters} = rules;
+    AtRule(atRule) {
+      const {params: parameters} = atRule;
 
       if (parameters.includes(METHOD)) {
-        rules.params = processValue(parameters);
+        atRule.params = processValue(parameters);
       }
-    });
+    }
   };
-});
+};
+
+plugin.postcss = true;
+
+export default plugin;

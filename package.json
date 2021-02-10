@@ -36,8 +36,7 @@
     "property"
   ],
   "dependencies": {
-    "@babel/runtime": "^7.7.2",
-    "postcss": "^7.0.21"
+    "@babel/runtime": "^7.7.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.0",
@@ -66,7 +65,11 @@
     "husky": "^3.0.9",
     "lint-staged": "^9.4.3",
     "nyc": "^14.1.1",
+    "postcss": "^8.2.5",
     "rimraf": "^3.0.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.2.5"
   },
   "ava": {
     "require": [

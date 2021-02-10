@@ -1,18 +1,19 @@
 # postcss-map-get <a href="https://github.com/postcss/postcss"><img align="left" height="49" title="PostCSS" src="http://postcss.github.io/postcss/logo.svg"></a>
+
 > [PostCSS](https://github.com/postcss/postcss) plugin to transform SASS Function [map-get](http://sass-lang.com/documentation/Sass/Script/Functions.html#map_get-instance_method).  
 
 [![Travis Build Status](https://img.shields.io/travis/Scrum/postcss-map-get/master.svg?style=flat-square&label=unix)](https://travis-ci.org/Scrum/postcss-map-get)[![node](https://img.shields.io/node/v/postcss-map-get.svg?maxAge=2592000&style=flat-square)]()[![npm version](https://img.shields.io/npm/v/postcss-map-get.svg?style=flat-square)](https://www.npmjs.com/package/postcss-map-get)[![Dependency Status](https://david-dm.org/scrum/postcss-map-get.svg?style=flat-square)](https://david-dm.org/scrum/postcss-map-get)[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square)](https://github.com/sindresorhus/xo)[![Coveralls status](https://img.shields.io/coveralls/Scrum/postcss-map-get.svg?style=flat-square)](https://coveralls.io/r/Scrum/postcss-map-get)
 
 [![npm downloads](https://img.shields.io/npm/dm/postcss-map-get.svg?style=flat-square)](https://www.npmjs.com/package/postcss-map-get)[![npm](https://img.shields.io/npm/dt/postcss-map-get.svg?style=flat-square)](https://www.npmjs.com/package/postcss-map-get)
 
-
 ## Why?
+
 Adds the ability to use sass like Map Function [map-get](http://sass-lang.com/documentation/Sass/Script/Functions.html#map_get-instance_method).  
 
 ## Install
 
 ```bash
-$ npm install postcss-map-get
+$ npm install postcss postcss-map-get
 ```
 
 > **Note:** This project is compatible with node v8+
@@ -38,11 +39,13 @@ var output = postcss()
 
 console.log(output);
 ```
+
 > Returns the value in a map associated with the given key. If the map doesn't have such a key, returns null.
 
-# Example
+## Example
 
 *input.css*
+
 ```css
 body {
   background: map-get((
@@ -64,7 +67,9 @@ body {
   max-width: 100%;
 }
 ```
+
 *output.css*
+
 ```css
 body {
   background: #fff;

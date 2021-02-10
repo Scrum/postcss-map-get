@@ -93,7 +93,7 @@ export default function (value) {
     mapString += output.content;
     position = output.position;
 
-    // resolve the desidered requested key
+    // resolve the desired requested key
     let keyString = '';
 
     // indicates if we found the come which separate map and requested key:
